@@ -2,6 +2,7 @@ import React from 'react';
 import main from '../assets/main.png';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView} from 'react-native';
 import data from '../data.json';
+import Card from '../components/Card';
 
 export default function MainPage() {
   console.disableYellowBox = true;
@@ -27,6 +28,14 @@ export default function MainPage() {
       </ScrollView>
       <View style={styles.cardContainer}>
          {/* 하나의 카드 영역을 나타내는 View */}
+         {
+          tip.map((content,i)=>{
+            return (<Card content={content} key={i}/>)
+          })
+        }
+      </View>
+      {/*
+      <View style={styles.cardContainer}>
          { 
           tip.map((content,i)=>{ // 반복문
             return (<View style={styles.card} key={i}>
@@ -40,6 +49,7 @@ export default function MainPage() {
           })
          }
       </View>
+      */}
     </ScrollView>
   );
 }
@@ -156,7 +166,6 @@ const styles = StyleSheet.create({
   cardDate: {
     fontSize:10,
     color:"#A6A6A6",
-  },
-
-
+  }
+  
 });
