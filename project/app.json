@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "sparta-myhoneytip",
-    "slug": "sparta-myhoneytip",
+    "name": "myhoneytip",
+    "slug": "myhoneytip",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
