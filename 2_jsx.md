@@ -74,18 +74,18 @@ https://docs.expo.io/versions/v38.0.0/react-native/view/
 
 ## 3. Tag
 
-1) <View>
+1) View
 
-2) <Text>
+2) Text
 
-3) <ScrollView>
+3) ScrollView
 
-4) <Button>
+4) Button
 
-5) <TouchableOpacity>
+5) TouchableOpacity
 - 누르는 기능
 
-6) <Image>
+6) Image
 
 ## 4. Styles
 - 자주 사용하는 style 속성
