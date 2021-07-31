@@ -5,14 +5,14 @@
 - let,var 중 하나 사용
 - 일괄적으로 let 사용
 
-```jsx
+```js
 let num = 20;
 console.log(num);
 ```
 
 - 사칙연산
 
-```jsx
+```js
 let a = 1
 let b = 2
 let c = a+b
@@ -21,7 +21,7 @@ console.log(c)
 console.log(a*b)
 ```
 
-```jsx
+```js
 // 문자
 
 let first = "gunhee"
@@ -36,7 +36,7 @@ console.log(first + a) // 숫자를 문자로 바꾼 뒤 수행
 
 - 변수명
 
-```jsx
+```js
 let firstName //camel case
 let first_name // snake case
 
@@ -45,7 +45,7 @@ let first_name // snake case
 
 - const로 변수 선언
 
-```jsx
+```js
 const num2 = 1000 //const 변수는 값이 변동되지 않는다.
 ```
 
@@ -53,7 +53,7 @@ const num2 = 1000 //const 변수는 값이 변동되지 않는다.
 
 - 리스트 : 여러 데이터를 쌓아 놓는다.
 
-```jsx
+```js
 let a_list = [1,2,3,4,'gunhee',6,7,'kim']
 console.log(a_list[4]) // 'gunhee'
 
@@ -65,7 +65,7 @@ a_list.length // 8
 
 - dict
 
-```jsx
+```js
 let a_dict = {"name":"gunhee","age":20} //key:value
 console.log(a_dict["name"])
 
@@ -76,7 +76,7 @@ console.log(a_dict) // {"name":"gunhee","age":20, "height":200}
 
 - list+dict
 
-```jsx
+```js
 let names = [{"name":"gunhee","age":20},{"name":"gunhee2","age":30}]
 
 // 삽입
@@ -90,7 +90,7 @@ names[1]["age"]
 
 ## 3. 자바스크립트 기본 제공 함수
 
-```jsx
+```js
 let a = 20
 let b = 7 
 console.log(a%b) // 나머지
@@ -111,7 +111,7 @@ console.log(names.join('>")) // 배열 합치기 //서울시>마포구>망원동
 
 ## 4. 함수
 
-```jsx
+```js
 function funcName(){
 	console.log("함수")
 }
@@ -136,7 +136,7 @@ a()
 
 ## 5. 조건문
 
-```jsx
+```js
 function is_adult(age){
 	if(age>20){
 		console.log("성인")
@@ -149,7 +149,7 @@ function is_adult(age){
 is_adult(30)
 ```
 
-```jsx
+```js
 // AND 조건은 이렇게
 function is_adult(age, sex){
 	if(age > 20 && sex == '여'){
@@ -179,7 +179,7 @@ is_adult(25,'남')
 
 ## 6. 반복문
 
-```jsx
+```js
 for(let i=0; i<10; i++){
 	console.log(i)
 }
@@ -190,11 +190,11 @@ for(let i=0; i < people.length; i++){
 }
 ```
 
-```jsx
+```js
 let scores = [
-	{'name':'철수', 'score':90},
-	{'name':'영희', 'score':85},
-	{'name':'민수', 'score':70},
+  {'name':'철수', 'score':90},
+  {'name':'영희', 'score':85},
+  {'name':'민수', 'score':70},
   {'name':'형준', 'score':50},
   {'name':'기남', 'score':68},
   {'name':'동희', 'score':30},
@@ -213,7 +213,7 @@ for (let i = 0 ; i < scores.length ; i++) {
 
 ## 7. Javascript 기초 연습
 
-```jsx
+```js
 // 합을 구하는 함수
 function get_sum(n){
 	let sum = 0
@@ -284,7 +284,7 @@ let mise_list = [
 
 - 함수 선언
 
-```jsx
+```js
 //함수 선언
 let a = function() {
   console.log("function");
@@ -298,7 +298,7 @@ a();.
 
 - 딕셔너리 키와 값을 빠르게 꺼내기! - 비구조 할당
 
-```jsx
+```js
 //객체 
 let blog = {
 	owner : "noah", //key값에 "" 없어도 key로 인식
@@ -332,7 +332,7 @@ blogFunction(blog)**
 
 - 줄바꿈을 자유롭게, 리터럴
 
-```jsx
+```js
 백틱(``) : (option+₩) 혹은 ₩만
 `줄바꿈이
 자유롭다`
@@ -343,7 +343,7 @@ const url = `http://noahlog.tistory.com/login/${id}` ;
 
 - 딕셔너리를 짧게 만들어보기, 객체 리터럴
 
-```jsx
+```js
 [기존 방식]
 
 var name = "스파르타";
@@ -395,7 +395,7 @@ numbers.map((value,i) => {
 
 - 파일을 모듈화 - module system
 
-```jsx
+```js
 //**export**는 자바스크립트의 값, 함수, 딕셔너리(객체) 또는 자바스크립트 파일 자체를 외부로 내보내는 키워드 이고 
 //**import**는 반대로 자바스크립트 파일 안으로 가져오는 키워드 입니다
 
@@ -405,7 +405,7 @@ export function times(x) {
 import { times } from './util.js';
 ```
 
-```jsx
+```js
 // in util.js
 export default function times(x) {
   return x * x;
@@ -418,7 +418,7 @@ console.log(k(4)); // returns 16
 
 - 과제
 
-```jsx
+```js
 //특정 과일 세기 in map
 let fruit_list = ['사과','감','감','배','포도','포도','딸기','포도','감','수박','딸기']
 let count = 0;
