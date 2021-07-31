@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView} from 'reac
 import data from '../data.json';
 import Card from '../components/Card';
 import Loading from '../components/Loading';
-
+import { StatusBar } from 'expo-status-bar';
 
 export default function MainPage() {
   console.disableYellowBox = true;
@@ -48,7 +48,7 @@ export default function MainPage() {
 
 
 	let todayWeather = 10 + 17;
-  let todayCondition = "흐림"
+    let todayCondition = "흐림"
 
 	//처음 ready 상태값은 true 이므로 ? 물음표 바로 뒤에 값이 반환(그려짐)됨
   //useEffect로 인해 데이터가 준비되고, ready 값이 변경되면 : 콜론 뒤의 값이 반환(그려짐)
@@ -57,26 +57,26 @@ export default function MainPage() {
       return 구문 안에서는 {슬래시 + * 방식으로 주석
     */
     <ScrollView style={styles.container}>
-      <Text style={styles.title}>나만의 꿀팁</Text>
-			 <Text style={styles.weather}>오늘의 날씨: {todayWeather + '°C ' + todayCondition} </Text>
-      <Image style={styles.mainImage} source={main}/>
-      <ScrollView style={styles.middleContainer} horizontal indicatorStyle={"white"}>
-        <TouchableOpacity style={styles.middleButtonAll} onPress={()=>{category('전체보기')}}><Text style={styles.middleButtonTextAll}>전체보기</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.middleButton01} onPress={()=>{category('생활')}}><Text style={styles.middleButtonText}>생활</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.middleButton02} onPress={()=>{category('재테크')}}><Text style={styles.middleButtonText}>재테크</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.middleButton03} onPress={()=>{category('반려견')}}><Text style={styles.middleButtonText}>반려견</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.middleButton04} onPress={()=>{category('꿀팁 찜')}}><Text style={styles.middleButtonText}>꿀팁 찜</Text></TouchableOpacity>
-      </ScrollView>
-      <View style={styles.cardContainer}>
-         {/* 하나의 카드 영역을 나타내는 View */}
-         {
-          cateState.map((content,i)=>{
-            return (<Card content={content} key={i}/>)
-          })
-        }
-        
-      </View>
-   
+        <StatusBar style="black" />
+        <Text style={styles.title}>나만의 꿀팁</Text>
+        <Text style={styles.weather}>오늘의 날씨: {todayWeather + '°C ' + todayCondition} </Text>
+        <Image style={styles.mainImage} source={main}/>
+        <ScrollView style={styles.middleContainer} horizontal indicatorStyle={"white"}>
+            <TouchableOpacity style={styles.middleButtonAll} onPress={()=>{category('전체보기')}}><Text style={styles.middleButtonTextAll}>전체보기</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.middleButton01} onPress={()=>{category('생활')}}><Text style={styles.middleButtonText}>생활</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.middleButton02} onPress={()=>{category('재테크')}}><Text style={styles.middleButtonText}>재테크</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.middleButton03} onPress={()=>{category('반려견')}}><Text style={styles.middleButtonText}>반려견</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.middleButton04} onPress={()=>{category('꿀팁 찜')}}><Text style={styles.middleButtonText}>꿀팁 찜</Text></TouchableOpacity>
+        </ScrollView>
+        <View style={styles.cardContainer}>
+            {/* 하나의 카드 영역을 나타내는 View */}
+            {
+            cateState.map((content,i)=>{
+                return (<Card content={content} key={i}/>)
+            })
+            }
+            
+        </View>
     </ScrollView>
   );
 }
