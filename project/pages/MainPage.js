@@ -64,6 +64,9 @@ export default function MainPage({navigation,route}) {
         <StatusBar style="black" />
         {/* <Text style={styles.title}>나만의 꿀팁</Text> */}
         <Text style={styles.weather}>오늘의 날씨: {todayWeather + '°C ' + todayCondition} </Text>
+        <TouchableOpacity style={styles.aboutButton} onPress={()=>{navigation.navigate('AboutPage')}}>
+          <Text style={styles.aboutButtonText}>소개 페이지</Text>
+        </TouchableOpacity>
         <Image style={styles.mainImage} source={main}/>
         <ScrollView style={styles.middleContainer} horizontal indicatorStyle={"white"}>
             <TouchableOpacity style={styles.middleButtonAll} onPress={()=>{category('전체보기')}}><Text style={styles.middleButtonTextAll}>전체보기</Text></TouchableOpacity>
@@ -102,7 +105,7 @@ const styles = StyleSheet.create({
   },
 weather:{
     alignSelf:"flex-end",
-    paddingRight:20
+    paddingRight:20,
   },
   mainImage: {
     //컨텐츠의 넓이 값
@@ -179,6 +182,20 @@ weather:{
     marginTop:10,
     marginLeft:10
   },
+  aboutButton: {
+    backgroundColor:"pink",
+    width:100,
+    height:40,
+    borderRadius:10,
+    alignSelf:"flex-end",
+    marginRight:20,
+    marginTop:10
+  },
+  aboutButtonText: {
+    color:"#fff",
+    textAlign:"center",
+    marginTop:10
+  }
 
 
 });
