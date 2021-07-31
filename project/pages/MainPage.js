@@ -5,6 +5,7 @@ import data from '../data.json';
 import Card from '../components/Card';
 import Loading from '../components/Loading';
 import { StatusBar } from 'expo-status-bar';
+import * as Location from "expo-location";
 
 export default function MainPage({navigation,route}) {
   console.disableYellowBox = true;
@@ -33,11 +34,27 @@ export default function MainPage({navigation,route}) {
         let tip = data.tip;
         setState(tip)
         setCateState(tip)
+        getLocation()
         setReady(false)
     },1000)
 
     
   },[])
+
+  const getLocation = async () => {
+    //수많은 로직중에 에러가 발생하면
+    //해당 에러를 포착하여 로직을 멈추고,에러를 해결하기 위한 catch 영역 로직이 실행
+    try {
+      //자바스크립트 함수의 실행순서를 고정하기 위해 쓰는 async,await
+      await Location.requestPermissionsAsync();
+      const locationData= await Location.getCurrentPositionAsync();
+      console.log(locationData)
+
+    } catch (error) {
+      //혹시나 위치를 못가져올 경우를 대비해서, 안내를 준비합니다
+      Alert.alert("위치를 찾을 수가 없습니다.", "앱을 껏다 켜볼까요?");
+    }
+  }
 
     const category = (cate) => {
         if(cate == "전체보기"){
