@@ -69,11 +69,11 @@ app.json 하단 추가
 
 아래 코드를 통해 파일 형태로 저장할 수 있다.
 ```s
-expo build:android # apk
+expo build:android
 ```
 
 이후, 구글 개발자 계정과 애플 개발자 계정을 연동해서 출시를 진행한다.
 
-구글 개발자
+구글 개발자 계정
 https://developer.android.com/distribute/console?hl=ko
 
