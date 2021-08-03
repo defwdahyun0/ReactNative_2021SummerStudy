@@ -9,3 +9,10 @@
 * [4.server](https://github.com/defwdahyun0/ReactNative_2021SummerStudy/blob/master/4_server.md)
 
 * [5.advertisement](https://github.com/defwdahyun0/ReactNative_2021SummerStudy/blob/master/5_advertisement.md)
+
+### project 실행
+```s
+$ cd project
+$ npm install
+$ expo start
+```
